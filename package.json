@@ -5,11 +5,19 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "deploy": "surge ./dist",
+    "full-deploy": "vue-cli-service build && echo https://columbusglitchbus.surge.sh > ./dist/CNAME && surge ./dist"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "core-js": "^2.6.5",
-    "vue": "^2.6.10"
+    "node-sass": "^4.11.0",
+    "sass-loader": "^7.1.0",
+    "vue": "^2.6.10",
+    "vue-axios": "^2.1.4",
+    "vue-plugin-load-script": "^1.2.0",
+    "vue-twitch-player": "^1.0.8"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.6.0",
